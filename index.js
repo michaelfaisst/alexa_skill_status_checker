@@ -71,6 +71,12 @@ StatusChecker.prototype.intentHandlers = {
 
         var repromptText = "Welche Seite würdest du gerne überprüfen?";
         response.ask(text, repromptText);
+    },
+    "AMAZON.StopIntent": function(intent, session, response) {
+        response.tell("");
+    },
+    "AMAZON.CancelIntent": function(intent, session, response) {
+        response.tell("");
     }
 };
 
